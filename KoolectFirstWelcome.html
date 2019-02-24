@@ -1,0 +1,793 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koolect(First Welcome)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="Investsure/FrontEnd1/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="Investsure/FrontEnd1/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="Investsure/FrontEnd1/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="Investsure/FrontEnd1/img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="Investsure/FrontEnd1/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="Investsure/FrontEnd1/fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+<style>
+
+#inja{
+ position:relative;
+ top:200px;
+}
+
+#onez{
+position: relative;
+border-style: solid;
+border-width: 1px;
+backgroung-color: blue;
+height : 350px;
+width: 1200px;
+top:200px;
+left:50px;
+}
+
+#buys{
+position:relative;
+left:50px;
+width:1200px;
+height: 40px;
+/*background-color:red*/;
+}
+
+
+#one1z{
+position: relative;
+backgroung-color: blue;
+height : 350px;
+width: 1200px;
+background-color:#D3D3D3;
+/*background-color: grey;*/
+top:200px;
+left:50px;
+}
+
+#twoz{
+position: relative;
+border-style: solid;
+border-width: 1px;
+top: 10px;
+left : 50px;
+height : 250px;
+width:1100px;
+/*background-color:red*/;
+}
+
+#two1z{
+position:relative;
+top:15px;
+left : 60px;
+height : 250px;
+width: 1100px;
+background-color: #D3D3D3;
+}
+
+
+#threez{
+ width : 270px ;
+ height: 250px;
+ float: left;
+ text-align:center;
+ background-color:#F5F5F5;
+}
+
+#photo{
+ position: relative;
+ top:25px;
+ width : 200px;
+ height: 200px;
+}
+
+#fourz{
+
+width: 250px;
+height: 250px;
+float : left;
+text-align: center;
+/*background-color:#F5F5F5;*/
+background-color: grey;
+}
+
+#four1z{
+border-right-style: solid;
+ border-left-style: solid;
+width: 250px;
+height: 250px;
+float : left;
+text-align: center;
+/*background-color:#F5F5F5;*/
+background-color: grey;
+}
+
+
+#fivez{
+ width : 50px;
+ height: 250px;
+ float: left;
+}
+
+#top{
+ position:absolute; 
+ top: 90px;
+ width: 1270px;
+ height :20px;
+ text-align: center;
+}
+ 
+
+
+#divid{
+ postision:relative;
+ border-style:solid;
+ border-width:thin;
+ width:420px;
+ height:20px;
+ float:left;
+ text-align:center;
+}
+
+#port_box{
+ position: absolute;
+ top: 120px;
+ left:450px;
+ width:300px;
+ height:300px;
+
+}
+
+#inside{
+ position:relative;
+ width:150px;
+ height:150px ;
+ border-style:solid;
+ border-width:thin;
+ text-align:center;
+ float:left;
+ background-color: #D3D3D3;
+
+}
+
+</style>
+
+ <script>
+//vele=5
+ http = new ajaxRequest()
+ http.open("POST","CompanyData.php", true)
+
+ http.onreadystatechange=function(){
+  if(this.readyState==4 && this.status==200){
+     //alert(http.responseText)
+     vele=http.responseText
+     //alert(vele)
+   }
+
+   else{
+    
+   }
+ }
+ http.send()
+  
+function ajaxRequest()
+{
+try // Non IE Browser?
+{
+// Yes
+var request = new XMLHttpRequest()
+}
+catch(e1)
+{
+try // IE 6+?
+{
+// Yes
+request = new ActiveXObject("Msxml2.XMLHTTP")
+}
+catch(e2)
+{
+try // IE 5?
+{
+// Yes
+request = new ActiveXObject("Microsoft.XMLHTTP")
+}
+catch(e3) // There is no AJAX Support
+{
+request = false
+}
+}
+}
+return request
+}
+</script>
+   
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-bookmark-o"></i>Koolect</a> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">Home</a></li>
+        <li><a href="#services" class="page-scroll">Invest</a></li>
+        <li><a href="#pricing" class="page-scroll">About Us</a></li>
+        <li><a href="#User" class="page-scroll"><i class="fa fa-user"></i></a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+
+</nav>
+
+<div id="elevate">
+<div id="top">
+<div id="divid">Investment</div>
+<div id="divid">Industry</div>
+<div id="divid">Top 10</div>
+</div>
+</div>
+
+<div id="inja">
+    <script>document.write(vele)</script> 
+</div>
+
+<!--
+<script>
+
+
+//vele=5
+ http = new ajaxRequest()
+ http.open("POST","fetchCompanyData.php",false)
+
+ http.onreadystatechange=function(){
+  if(this.readyState==4 && this.status==200){
+     //alert(http.responseText)
+     vele=http.responseText
+     //alert(vele)
+   }
+
+   else{
+    
+   }
+ }
+ http.send()
+  
+function ajaxRequest()
+{
+try // Non IE Browser?
+{
+// Yes
+var request = new XMLHttpRequest()
+}
+catch(e1)
+{
+try // IE 6+?
+{
+// Yes
+request = new ActiveXObject("Msxml2.XMLHTTP")
+}
+catch(e2)
+{
+try // IE 5?
+{
+// Yes
+request = new ActiveXObject("Microsoft.XMLHTTP")
+}
+catch(e3) // There is no AJAX Support
+{
+request = false
+}
+}
+}
+return request
+}   
+
+
+    for(var i=1;i<=10;i++){
+     
+     if(i%2 == 1){	      
+	
+     var onek = document.createElement('div')
+     onek.id="onek"+i
+     onek.style.position="relative"
+     onek.style.border="solid"
+     //onek.style.border-width="1px"
+     //onek.style.backgroung="blue"
+     onek.style.height="350px"
+     onek.style.width="1200px"
+     onek.style.top="200px"
+     onek.style.left="50px"
+     //onek.innerText="Yess"
+     document.body.appendChild(onek)
+
+     var buysk  = document.createElement('div')
+     buysk.id="buysk"+i
+     buysk.style.position="relative"
+     buysk.style.left="50px"
+     buysk.style.width="1200px"
+     buysk.style.height="40px"
+     document.getElementById("onek"+i).appendChild(buysk)
+
+     var wrongk= document.createElement('h3')
+     wrongk.id="wrongk"+i
+     wrongk.innerText="Anglo America   "
+     document.getElementById("buysk"+i).appendChild(wrongk)
+
+     var connectk = document.createElement('a')
+     connectk.href="KoolectCompanyDetailsAnglo.html"
+     connectk.id="coonect"+i
+     connectk.innerText="         link"
+     document.getElementById("wrongk"+i).appendChild(connectk)
+
+     //var link = document.createElement('i')
+     //link.class="fa fa-info"
+     //document.getElementById("connect").appendChild(link)  //please fix the above problem
+
+     var twok = document.createElement('div')
+     twok.id="twok"+i
+     twok.style.position="relative"
+     //border-style: solid;
+     //border-width: 1px;
+     //top: 10px;
+     twok.style.left="50px"
+     twok.style.height="250px"
+     twok.style.width="1100px"
+     document.getElementById("onek"+i).appendChild(twok)
+
+     var threek= document.createElement('div')
+     threek.id="threek"+i
+     threek.style.width="270px"
+     threek.style.height="250px"
+     threek.style.float="left"
+     //threek.style.text-align="center"
+     threek.style.background="#F5F5F5"
+     threek.innerText="photo here"
+     document.getElementById("twok"+i).appendChild(threek) // append image element here     
+      
+     var fivek = document.createElement('div')
+     fivek.id="fivek"+i
+     fivek.style.width="50px"
+     fivek.style.height="250px"
+     fivek.style.float="left"
+     //fivek.innerText="ok"
+     document.getElementById("twok"+i).appendChild(fivek)
+
+     var fourk = document.createElement('div')
+     fourk.id="fourk"+i
+     fourk.style.width="250px"
+     fourk.style.height=" 250px"
+     fourk.style.float="left"
+     //text-align: center;
+     fourk.style.background="#F5F5F5"
+     fourk.innerText="P/E Ratio"
+     document.getElementById("twok"+i).appendChild(fourk)
+    
+     var fourk1 = document.createElement('div')
+     fourk1.id="fourk1"+i
+     //border-right-style: solid;
+     //border-left-style: solid;
+     fourk1.style.width="250px"
+     fourk1.style.height="250px"
+     fourk1.style.float ="left"
+     //text-align: center;
+     fourk1.style.background="#F5F5F5"
+     fourk1.innerText="Debt to Asset"
+     document.getElementById("twok"+i).appendChild(fourk1)
+
+     var fourk2 = document.createElement('div')
+     fourk2.id="fourk"+i
+     fourk2.style.width="250px"
+     fourk2.style.height=" 250px"
+     fourk2.style.float="left"
+     //text-align: center;
+     fourk2.style.background="#F5F5F5"
+     fourk2.innerText="Dividend Ratio"
+     document.getElementById("twok"+i).appendChild(fourk2)
+     }
+
+    else{
+      
+      var onek = document.createElement('div')
+     onek.id="onek"+i
+     onek.style.position="relative"
+     onek.style.border="solid"
+     onek.style.background="#D3D3D3"
+     //onek.style.border-width="1px"
+     //onek.style.backgroung="blue"
+     onek.style.height="350px"
+     onek.style.width="1200px"
+     onek.style.top="200px"
+     onek.style.left="50px"
+     //onek.innerText="Yess"
+     document.body.appendChild(onek)
+
+     var buysk  = document.createElement('div')
+     buysk.id="buysk"+i
+     buysk.style.position="relative"
+     buysk.style.left="50px"
+     buysk.style.width="1200px"
+     buysk.style.height="40px"
+     document.getElementById("onek"+i).appendChild(buysk)
+
+     var wrongk= document.createElement('h3')
+     wrongk.id="wrongk"+i
+     wrongk.innerText="Anglo America   "
+     document.getElementById("buysk"+i).appendChild(wrongk)
+
+     var connectk = document.createElement('a')
+     connectk.href="KoolectCompanyDetailsAnglo.html"
+     connectk.id="coonect"+i
+     connectk.innerText="         link"
+     document.getElementById("wrongk"+i).appendChild(connectk)
+
+     //var link = document.createElement('i')
+     //link.class="fa fa-info"
+     //document.getElementById("connect").appendChild(link)  //please fix the above problem
+
+     var twok = document.createElement('div')
+     twok.id="twok"+i
+     twok.style.position="relative"
+     //border-style: solid;
+     //border-width: 1px;
+     //top: 10px;
+     twok.style.left="50px"
+     twok.style.height="250px"
+     twok.style.width="1100px"
+     document.getElementById("onek"+i).appendChild(twok)
+
+     var threek= document.createElement('div')
+     threek.id="threek"+i
+     threek.style.width="270px"
+     threek.style.height="250px"
+     threek.style.float="left"
+     //threek.style.text-align="center"
+     threek.style.background="#F5F5F5"
+     threek.innerText="photo here"
+     document.getElementById("twok"+i).appendChild(threek) // append image element here     
+      
+     var fivek = document.createElement('div')
+     fivek.id="fivek"+i
+     fivek.style.width="50px"
+     fivek.style.height="250px"
+     fivek.style.float="left"
+     //fivek.innerText="ok"
+     document.getElementById("twok"+i).appendChild(fivek)
+
+     var fourk = document.createElement('div')
+     fourk.id="fourk"+i
+     fourk.style.width="250px"
+     fourk.style.height=" 250px"
+     fourk.style.float="left"
+     //text-align: center;
+     fourk.style.background="#F5F5F5"
+     fourk.innerText="P/E Ratio"
+     document.getElementById("twok"+i).appendChild(fourk)
+    
+     var fourk1 = document.createElement('div')
+     fourk1.id="fourk1"+i
+     //border-right-style: solid;
+     //border-left-style: solid;
+     fourk1.style.width="250px"
+     fourk1.style.height="250px"
+     fourk1.style.float ="left"
+     //text-align: center;
+     fourk1.style.background="#F5F5F5"
+     fourk1.innerText="Debt to Asset"
+     document.getElementById("twok"+i).appendChild(fourk1)
+
+     var fourk2 = document.createElement('div')
+     fourk2.id="fourk"+i
+     fourk2.style.width="250px"
+     fourk2.style.height=" 250px"
+     fourk2.style.float="left"
+     //text-align: center;
+     fourk2.style.background="#F5F5F5"
+     fourk2.innerText="Dividend Ratio"
+     document.getElementById("twok"+i).appendChild(fourk2)
+
+    }
+
+    // }
+
+  }
+</script>
+-->
+
+<div id="onez">
+    <div id="buys"><a href="Anglo.html" id="connect"><h3>Anglo America</h3></a></div>
+	<div id="twoz">
+		<div id="threez"><div id="photo"><img src="angloamerican.jpg" height="200" width="200"></div></div>
+		<div id="fivez"></div>
+		<div id="fourz">P/E Ratio</div>
+		<div id="four1z">Debt to Asset</div>
+		<div id="fourz">Dividend Ratio</div>
+ 	</div>
+</div>
+
+<div id="one1z">
+    <div id="buys"><a href="AVI.html" id="connect"><h3>AVI</h3></a></div>
+<div id="twoz">
+<div id="threez">
+<div id="photo"><img src="avi.png" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+<div id="onez">
+<div id="buys"><a href="CityLodge.html" id="connect"><h3>City Lodge</h3></a></div>
+<div id="twoz">
+<div id="threez"><div id="photo"><img src="citylodge.jpg" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+
+<div id="one1z">
+    <div id="buys"><a href="Clicks.html" id="connect"><h3>Clicks</h3></a></div>
+<div id="twoz">
+<div id="threez">
+<div id="photo"><img src="clicks.png" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+<div id="onez">
+<div id="buys"><a href="FamousBrands.html" id="connect"><h3>Famous Brands</h3></a></div>
+<div id="twoz">
+<div id="threez"><div id="photo"><img src="fanousbrands.jpg" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+
+<div id="one1z">
+<div id="buys"><h3>Investec <a href="KoolectCompanyDetailsInvestec.html" id="connect"><i class="fa fa-info"></i></a> </h3></div>
+<div id="twoz">
+<div id="threez">
+<div id="photo"><img src="/home/khutso/Documents/Projects/Investsure/Company data/Company Logos/Investec logo.png" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+<div id="onez">
+<div id="buys"> <h3 id="wrong">Growth Point Properties <a href="KoolectCompanyDetailsGrowth.html" id="connect"><i class="fa fa-info"></i></a> </h3> </div>
+<div id="twoz">
+<div id="threez"><div id="photo"><img src="/home/khutso/Documents/Projects/Investsure/Company data/Company Logos/Growth Point Properties.jpg" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+
+<div id="one1z">
+<div id="buys"><h3>Bidvest <a href="KoolectCompanyDetailsBidvest.html" id="connect"><i class="fa fa-info"></i></a> </h3></div>
+<div id="twoz">
+<div id="threez">
+<div id="photo"><img src="/home/khutso/Documents/Projects/Investsure/Company data/Company Logos/Bidvest logo.png" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+<div id="onez">
+<div id="buys"> <h3 id="wrong">BHP Billiton <a href="KoolectCompanyDetailsBHP.html" id="connect"><i class="fa fa-info"></i></a> </h3> </div>
+<div id="twoz">
+<div id="threez"><div id="photo"><img src="/home/khutso/Documents/Projects/Investsure/Company data/Company Logos/BHP Billiton Logo.png" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+
+<div id="one1z">
+<div id="buys"><h3>Aspen <a href="KoolectCompanyDetailsAspen.html" id="connect"><i class="fa fa-info"></i></a> </h3></div>
+<div id="twoz">
+<div id="threez">
+<div id="photo"><img src="/home/khutso/Documents/Projects/Investsure/Company data/Company Logos/Aspen.jpeg" height="200" width="200"></div></div>
+<div id="fivez"></div>
+<div id="fourz">P/E Ratio</div>
+<div id="four1z">Debt to Asset</div>
+<div id="fourz">Dividend Ratio</div>
+</div>
+</div>
+
+
+<!--
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+<div id="one1">
+<h3>Company name</h3>
+<div id="two">
+<div id="three"> Add photo here</div>
+<div id="five"></div>
+<div id="four">P/E Ratio</div>
+<div id="four1">Debt to Asset</div>
+<div id="four">Dividend Ratio</div>
+</div>
+</div>
+-->
+
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/SmoothScroll.js"></script>
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+<script type="text/javascript" src="js/contact_me.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>

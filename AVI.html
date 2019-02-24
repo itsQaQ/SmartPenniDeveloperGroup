@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        
+<style>
+
+        </style>
+        
+   <!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="FrontEnd1/img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="FrontEnd1/img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="FrontEnd1/img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="FrontEnd1/img/apple-touch-icon-114x114.png">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="FrontEnd1/fonts/font-awesome/css/font-awesome.css">
+
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+    </head>
+    <body  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+ <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+<script src="//code.highcharts.com/stock/highstock.js"></script>
+<script src="//code.highcharts.com/highcharts-more.js"></script>
+<script src='javascript.js'></script>
+
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-bookmark-o"></i>Koolect</a> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about" class="page-scroll">Home</a></li>
+        <li><a href="#services" class="page-scroll">Invest</a></li>
+        <li><a href="#pricing" class="page-scroll">About Us</a></li>
+        <li><a href="#User" class="page-scroll"><i class="fa fa-user"></i></a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+
+</nav>
+
+<br><br><br><br><br>
+<div id="sector">
+    <form>
+<select name="sector" size="2">
+    <option value="volovo">sectorxiSSS</option>
+    <option value="volvo">company</option>
+</select>
+</form>
+</div>
+<div id="one">
+<div id="eight"><h3>AVI</h3> 
+<div id="photo"><img src="avi.png" height="200" width="200"></div> 
+</div>
+<div id="seven"><h3 id="price17">R152 per share</h3>
+<p id="demo"></p>
+<form>
+<div id="ten">Amount<br><input type="text" name="amount"></div>
+<div id="ten1">Number of Shares<br><input type="text" name="number"></div>
+<br>
+
+<br>
+<input id="buy" type="submit" value="Buy" onClick="loadDoc()" ><br>
+</form>
+</div>
+</div>
+ 
+
+<div id="two" class="dropdown">Company Summary  <div id="arrow"><span class="glyphicon glyphicon-menu-down"> </div>
+    <div class="dropdown-content">
+        <p>Add company summary here</p>
+    </div>
+</div>
+
+<div id="three" class="dropdown">Financial Performance <div id="arrow"><span class="glyphicon glyphicon-menu-down"></div>
+   
+        
+        <div class="dropdown-content">
+        <div id="chart1" class="chart-area" >
+    <div class="aspect-ratio" ></div>
+    <div class="chart-wrapper" >
+        <div class="chart" ></div>
+    </div>
+</div>
+    </div>
+        
+</div>
+
+<div id="four" class="dropdown">Share Ratio  <div id="arrow"><span class="glyphicon glyphicon-menu-down"></div>
+    <div class="dropdown-content">
+        
+    </div>
+</div>
+
+ 
+
+<div id="six">Share Ratios</div>
+<div id="five">
+ <div id="nine">P/E Ratio
+     <br><br><br>
+     <h1>18.71</h1>
+ </div>
+ <div id="nine1">Debt to Asset
+     <br><br><br>
+     <h1>4</h1>
+ </div>
+ <div id="nine">Dividen to Ratio
+     <br><br><br>
+     <h1>4</h1>
+ </div>
+</div> 
+
+ 
+<div id="chart1" class="chart-area" >
+    <div class="aspect-ratio" ></div>
+    <div class="chart-wrapper" >
+        <div class="chart" ></div>
+    </div>
+</div>
+
+<div id="chart1" class="chart-area" >
+    <div class="aspect-ratio" ></div>
+    <div class="chart-wrapper" >
+        <div class="chart" ></div>
+    </div>
+</div> 
+
+
+<script>
+ function pop(){
+  alert("Confirmation: Buy 100 shares of Anglo American")
+ }
+
+ function price(){
+   p = document.body.getElementById("price17")
+   p.innerHTML="R3000 per share"
+ }
+ 
+ function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET","priceInvest.php", true);
+  xhttp.send();
+}
+
+
+function financial_data() {
+    document.getElementById("myDropdownz").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
+</script>
+
+
+    </body>
+</html>
+
